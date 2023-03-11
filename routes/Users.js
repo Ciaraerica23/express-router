@@ -23,4 +23,8 @@ let users = [
 router.get('/',(req,res)=>{
     res.json(users)
 })
+router.get('/:id',(req,res)=>{
+    const id = req.params.id-1
+    res.json(users[id])
+})
 module.exports = router
